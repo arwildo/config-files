@@ -6,5 +6,6 @@ set ai
 set number
 set hlsearch
 set ruler
+set vb
 highlight Comment ctermfg=green
 
