@@ -8,4 +8,4 @@ set hlsearch
 set ruler
 set vb
 highlight Comment ctermfg=green
-
+set backspace=indent,eol,start
