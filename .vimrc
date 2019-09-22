@@ -26,13 +26,13 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='powerlineish'
 let g:airline#extensions#whitespace#enabled = 0 
 
-set term=screen-256color
-colorscheme minimalist
 
 " History
 set history=50
 
 " Display
+set term=screen-256color
+colorscheme minimalist
 set ls=2
 set showmode
 set showcmd
@@ -44,10 +44,9 @@ set ai
 set number
 set hlsearch
 set vb
-"highlight Comment ctermfg=green
 
 " Make backspace nicer
-set backspace=eol,start,indent
+set backspace=indent,eol,start
 
 " Line wrapping
 set nowrap
