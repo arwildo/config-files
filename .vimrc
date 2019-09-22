@@ -9,6 +9,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()
 filetype plugin on 
@@ -40,7 +42,8 @@ set hlsearch
 set vb
 highlight Comment ctermfg=green
 
-set backspace=indent,eol,start
+" Make backspace nicer
+set backspace=eol,start,indent
 
 " Line wrapping
 set nowrap
@@ -70,14 +73,11 @@ set expandtab
 " Disable mouse
 set mouse=
 
-" Colorscheme
-if &t_Co == 256
-    try
-        color xoria256
-    catch /^Vim\%((\a\+)\)\=:E185/
-        " Oh Well Will 
-    endtry
-endif
+" Visual prompt for command completion
+set wildmenu
+
+" Folding
+set nofoldenable
 
 set noesckeys
 set nocompatible
