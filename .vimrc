@@ -11,6 +11,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
+Plugin 'dikiaap/minimalist'
 
 call vundle#end()
 filetype plugin on 
@@ -24,6 +25,9 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='powerlineish'
 let g:airline#extensions#whitespace#enabled = 0 
+
+set term=screen-256color
+colorscheme minimalist
 
 " History
 set history=50
@@ -40,7 +44,7 @@ set ai
 set number
 set hlsearch
 set vb
-highlight Comment ctermfg=green
+"highlight Comment ctermfg=green
 
 " Make backspace nicer
 set backspace=eol,start,indent
