@@ -79,5 +79,8 @@ set wildmenu
 " Folding
 set nofoldenable
 
+" Nerdtree shortcut
+map <C-n> :NERDTreeToggle<CR>
+
 set noesckeys
 set nocompatible
