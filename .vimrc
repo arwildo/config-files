@@ -26,10 +26,18 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='jellybeans'
 let g:airline#extensions#whitespace#enabled = 0 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f00d3aa62c80bdce6003a0a2b7b59d7345fcff75
 " History
 set history=50
 
 " Display
+<<<<<<< HEAD
+=======
+set term=screen-256color
+>>>>>>> f00d3aa62c80bdce6003a0a2b7b59d7345fcff75
 colorscheme minimalist
 set ls=2
 set showmode
