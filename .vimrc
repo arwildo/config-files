@@ -8,10 +8,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
-Plugin 'godlygeek/tabular'
 Plugin 'dikiaap/minimalist'
+Plugin 'mattn/emmet-vim'
+Plugin 'ap/vim-css-color'
 
 call vundle#end()
 filetype plugin on 
@@ -23,16 +23,14 @@ set encoding=utf-8
 " Airline config
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='powerlineish'
+let g:airline_theme='jellybeans'
 let g:airline#extensions#whitespace#enabled = 0 
-
-set term=screen-256color
-colorscheme minimalist
 
 " History
 set history=50
 
 " Display
+colorscheme minimalist
 set ls=2
 set showmode
 set showcmd
@@ -44,18 +42,18 @@ set ai
 set number
 set hlsearch
 set vb
-"highlight Comment ctermfg=green
 
 " Make backspace nicer
-set backspace=eol,start,indent
+set backspace=indent,eol,start
 
 " Line wrapping
 set nowrap
 set linebreak
 set showbreak=▹
 
-" Auto indent
+" Indent
 set autoindent
+set cindent
 
 " Searching
 set ignorecase
@@ -85,6 +83,9 @@ set nofoldenable
 
 " Nerdtree shortcut
 map <C-n> :NERDTreeToggle<CR>
+
+" Emmet
+let g:user_emmet_leader_key=','
 
 set noesckeys
 set nocompatible
