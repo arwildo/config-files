@@ -36,6 +36,8 @@ function! s:def_base_syntax()
     hi link baseDelimiter Special
 endfunction
 
+
+
 " Airline config
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
