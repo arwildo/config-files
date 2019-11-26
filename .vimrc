@@ -12,6 +12,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'dikiaap/minimalist'
 Plugin 'mattn/emmet-vim'
 Plugin 'ap/vim-css-color'
+Plugin 'tpope/vim-surround'
+Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
 filetype plugin on 
@@ -53,7 +55,7 @@ set showbreak=▹
 
 " Indent
 set autoindent
-set cindent
+"set cindent
 
 " Searching
 set ignorecase
@@ -89,3 +91,4 @@ let g:user_emmet_leader_key=','
 
 set noesckeys
 set nocompatible
+"set shell=powershell
