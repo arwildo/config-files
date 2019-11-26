@@ -1,5 +1,10 @@
 filetype off
 
+set runtimepath-=~/vimfiles
+set runtimepath^=~/.vim
+set runtimepath-=~/vimfiles/after
+set runtimepath+=~/.vim/after
+
 let g:vundle_default_git_proto = 'git'
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -25,12 +30,10 @@ set encoding=utf-8
 " Simbols hightlighting
 autocmd FileType python,javascript,java call <SID>def_base_syntax()
 function! s:def_base_syntax()
-    syntax match commonOperator "\(+\|=\|(\|)\|{\|}\|<\|>\|!\|;\|-\|\^\|\*\)"
-    syntax match base1Delimiter ","
-    syntax match base2Delimiter "[.]"
+    syntax match commonOperator "?\|+\|-\|\*\|;\|:\|,\|<\|>\|&\||\|!\|\~\|%\|=\|)\|(\|{\|}\|\.\|\[\|\]\|/\(/\|*\)\@!"
+    syntax match baseDelimiter "\((\|)\|{\|}\|\[\|]\|;\)"
     hi link commonOperator Operator
-    hi link base1Delimiter Special
-    hi link base2Delimiter Special
+    hi link baseDelimiter Special
 endfunction
 
 
@@ -38,14 +41,13 @@ endfunction
 " Airline config
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='powerlineish'
+let g:airline_theme='jellybeans'
 let g:airline#extensions#whitespace#enabled = 0 
 
 " History
 set history=50
 
 " Display
-set term=screen-256color
 colorscheme minimalist
 set ls=2
 set showmode
@@ -105,3 +107,4 @@ let g:user_emmet_leader_key=','
 
 set noesckeys
 set nocompatible
+set shell=powershell
