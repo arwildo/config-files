@@ -1,1 +1,1 @@
-syn keyword pythonSelfStatm self
+syn keyword pythonStatement self
