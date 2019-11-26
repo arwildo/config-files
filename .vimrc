@@ -22,6 +22,18 @@ filetype plugin on
 syntax on
 set encoding=utf-8
 
+" Simbols hightlighting
+autocmd FileType * call <SID>def_base_syntax() " autocmd Syntax may be better
+function! s:def_base_syntax()
+    " Simple example
+    syntax match commonOperator "\(+\|=\|<\|>\|!\|-\|\^\|\*\)"
+    syntax match baseDelimiter ","
+    hi link commonOperator Operator
+    hi link baseDelimiter Special
+endfunction
+
+
+
 " Airline config
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -91,4 +103,4 @@ let g:user_emmet_leader_key=','
 
 set noesckeys
 set nocompatible
-"set shell=powershell
+set shell=powershell
