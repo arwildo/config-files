@@ -23,13 +23,14 @@ syntax on
 set encoding=utf-8
 
 " Simbols hightlighting
-autocmd FileType * call <SID>def_base_syntax() " autocmd Syntax may be better
+autocmd FileType * call <SID>def_base_syntax()
 function! s:def_base_syntax()
-    " Simple example
     syntax match commonOperator "\(+\|=\|<\|>\|!\|-\|\^\|\*\)"
-    syntax match baseDelimiter ","
+    syntax match base1Delimiter ","
+    syntax match base2Delimiter "[.]"
     hi link commonOperator Operator
-    hi link baseDelimiter Special
+    hi link base1Delimiter Special
+    hi link base2Delimiter Special
 endfunction
 
 
@@ -103,4 +104,3 @@ let g:user_emmet_leader_key=','
 
 set noesckeys
 set nocompatible
-set shell=powershell
