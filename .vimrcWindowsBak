@@ -1,5 +1,10 @@
 filetype off
 
+set runtimepath-=~/vimfiles
+set runtimepath^=~/.vim
+set runtimepath-=~/vimfiles/after
+set runtimepath+=~/.vim/after
+
 let g:vundle_default_git_proto = 'git'
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -23,9 +28,9 @@ syntax on
 set encoding=utf-8
 
 " Simbols hightlighting
-autocmd FileType * call <SID>def_base_syntax()
+autocmd FileType python,javascript,java call <SID>def_base_syntax()
 function! s:def_base_syntax()
-    syntax match commonOperator "\(+\|=\|<\|>\|!\|-\|\^\|\*\)"
+    syntax match commonOperator "\(+\|=\|(\|)\|{\|}\|<\|>\|!\|;\|-\|\^\|\*\)"
     syntax match base1Delimiter ","
     syntax match base2Delimiter "[.]"
     hi link commonOperator Operator
@@ -104,3 +109,4 @@ let g:user_emmet_leader_key=','
 
 set noesckeys
 set nocompatible
+set shell=powershell
