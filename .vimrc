@@ -19,6 +19,9 @@ Plugin 'mattn/emmet-vim'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-surround'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'ervandew/supertab'
+Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()
 filetype plugin on 
@@ -30,13 +33,11 @@ set encoding=utf-8
 " Simbols hightlighting
 autocmd FileType python,javascript,java call <SID>def_base_syntax()
 function! s:def_base_syntax()
-    syntax match commonOperator "?\|+\|-\|\*\|;\|:\|,\|<\|>\|&\||\|!\|\~\|%\|=\|)\|(\|{\|}\|\.\|\[\|\]\|/\(/\|*\)\@!"
-    syntax match baseDelimiter "\((\|)\|{\|}\|\[\|]\|;\)"
+    syntax match commonOperator "?\|+\|-\|\*\|<\|>\|&\||\|!\|\~\|%\|=\|/\(/\|*\)\@!"
+    syntax match baseDelimiter "\((\|)\|{\|}\|\.\|\[\|\]\|,\|;\|:\)"
     hi link commonOperator Operator
     hi link baseDelimiter Special
 endfunction
-
-
 
 " Airline config
 let g:airline_powerline_fonts = 1
