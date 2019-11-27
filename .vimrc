@@ -22,6 +22,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ervandew/supertab'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'luochen1990/rainbow'
 
 call vundle#end()
 filetype plugin on 
@@ -34,10 +35,12 @@ set encoding=utf-8
 autocmd FileType python,javascript,java call <SID>def_base_syntax()
 function! s:def_base_syntax()
     syntax match commonOperator "?\|+\|-\|\*\|<\|>\|&\||\|!\|\~\|%\|=\|/\(/\|*\)\@!"
-    syntax match baseDelimiter "\((\|)\|{\|}\|\.\|\[\|\]\|,\|;\|:\)"
+    syntax match baseDelimiter "\(,\|;\|:\)"
     hi link commonOperator Operator
     hi link baseDelimiter Special
 endfunction
+" Bracket colorizer
+let g:rainbow_active = 1  
 
 " Airline config
 let g:airline_powerline_fonts = 1
@@ -49,7 +52,7 @@ let g:airline#extensions#whitespace#enabled = 0
 set history=50
 
 " Display
-set term=screen-256color
+set term=screen-256color 
 colorscheme minimalist
 set ls=2
 set showmode
