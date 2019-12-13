@@ -35,7 +35,7 @@ set encoding=utf-8
 autocmd FileType python call <SID>def_base_syntax1()
 function! s:def_base_syntax1()
     syntax match commonOperator "?\|+\|-\|\*\|<\|>\|&\||\|!\|\~\|%\|//\|=\|/\(/\|*\)\@!"
-    syntax match baseDelimiter "\(,\|;\|:\)"
+    syntax match baseDelimiter "\(,\|[.]\|;\|:\)"
     hi link commonOperator Operator
     hi link baseDelimiter Special
 endfunction
@@ -43,7 +43,7 @@ endfunction
 autocmd FileType javascript,java call <SID>def_base_syntax2()
 function! s:def_base_syntax2()
     syntax match commonOperator "?\|+\|-\|\*\|<\|>\|&\||\|!\|\~\|%\|=\|/\(/\|*\)\@!"
-    syntax match baseDelimiter "\(,\|;\|:\)"
+    syntax match baseDelimiter "\(,\|[.]\|;\|:\)"
     hi link commonOperator Operator
     hi link baseDelimiter Special
 endfunction
@@ -126,9 +126,9 @@ set noesckeys
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set nobackup
 set noswapfile
+set shell=powershell
 
 " Make it more faster
 set timeoutlen=1000
 set ttimeoutlen=0
 set ttyfast
-set lazyredraw
