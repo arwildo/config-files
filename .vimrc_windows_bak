@@ -25,7 +25,6 @@ Plugin 'luochen1990/rainbow'
 Plugin 'jacoborus/tender.vim'
 
 call vundle#end()
-filetype plugin on 
 
 " Highlighting
 syntax on
@@ -60,7 +59,7 @@ let g:rainbow_active = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='powerlineish'
-let g:airline#extensions#whitespace#enabled = 0 
+let g:airline#extensions#whitespace#enabled = 0
 
 " History
 set history=50
@@ -87,10 +86,6 @@ set nowrap
 set linebreak
 set showbreak=▹
 
-" Indent
-set autoindent
-set smartindent
-
 " Searching
 set ignorecase
 set smartcase
@@ -99,12 +94,14 @@ set hlsearch
 set showmatch
 
 " Indentation
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set shiftround
 set expandtab
 set copyindent
+set autoindent
+set smartindent
 
 " Disable mouse
 set mouse=
