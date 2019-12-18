@@ -1,4 +1,5 @@
 filetype off
+set nocompatible
 
 set runtimepath-=~/vimfiles
 set runtimepath^=~/.vim
@@ -19,22 +20,21 @@ Plugin 'mattn/emmet-vim'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-surround'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'jiangmiao/auto-pairs'
 Plugin 'ervandew/supertab'
 Plugin 'luochen1990/rainbow'
+Plugin 'jacoborus/tender.vim'
 
 call vundle#end()
-filetype plugin on 
 
 " Highlighting
 syntax on
 set encoding=utf-8
 
-" Simbols hightlighting
+" Simbols highlighting
 autocmd FileType python call <SID>def_base_syntax1()
 function! s:def_base_syntax1()
     syntax match commonOperator "?\|+\|-\|\*\|<\|>\|&\||\|!\|\~\|%\|//\|=\|/\(/\|*\)\@!"
-    syntax match baseDelimiter "\(,\|;\|:\)"
+    syntax match baseDelimiter "\(,\|[.]\|;\|:\)"
     hi link commonOperator Operator
     hi link baseDelimiter Special
 endfunction
@@ -42,12 +42,10 @@ endfunction
 autocmd FileType javascript,java call <SID>def_base_syntax2()
 function! s:def_base_syntax2()
     syntax match commonOperator "?\|+\|-\|\*\|<\|>\|&\||\|!\|\~\|%\|=\|/\(/\|*\)\@!"
-    syntax match baseDelimiter "\(,\|;\|:\)"
+    syntax match baseDelimiter "\(,\|[.]\|;\|:\)"
     hi link commonOperator Operator
     hi link baseDelimiter Special
 endfunction
-
-
 
 " Bracket colorizer
 let g:rainbow_active = 1  
@@ -55,8 +53,9 @@ let g:rainbow_active = 1
 " Airline config
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline_theme='powerlineish'
-let g:airline#extensions#whitespace#enabled = 0 
+let g:airline#extensions#whitespace#enabled = 0
 
 " History
 set history=50
@@ -84,10 +83,6 @@ set nowrap
 set linebreak
 set showbreak=▹
 
-" Indent
-set autoindent
-"set cindent
-
 " Searching
 set ignorecase
 set smartcase
@@ -95,15 +90,16 @@ set gdefault
 set hlsearch
 set showmatch
 
-" Enable jumping into files in a search buffer
-set hidden 
-
 " Indentation
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set shiftround
 set expandtab
+set copyindent
+set autoindent
+set smartindent
+autocmd FileType python setlocal foldmethod=indent smartindent shiftwidth=4 ts=4 et cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 " Disable mouse
 set mouse=
@@ -117,8 +113,19 @@ set nofoldenable
 " Nerdtree shortcut
 map <C-n> :NERDTreeToggle<CR>
 
+" Nerdtree hide ignored files
+let NerdTreeRespectWildIgnore=1
+
 " Emmet
 let g:user_emmet_leader_key=','
 
+" Other
 set noesckeys
-set nocompatible
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.dat
+set nobackup
+set noswapfile
+
+" Make it more faster
+set timeoutlen=1000
+set ttimeoutlen=0
+set ttyfast
