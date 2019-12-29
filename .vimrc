@@ -47,6 +47,11 @@ function! s:def_base_syntax2()
     hi link baseDelimiter Special
 endfunction
 
+" Set termgui to fix color on winx
+if (has("termguicolors"))
+    set termguicolors
+endif
+
 " Bracket colorizer
 let g:rainbow_active = 1  
 
@@ -61,7 +66,6 @@ let g:airline#extensions#whitespace#enabled = 0
 set history=50
 
 " Display
-set term=screen-256color
 colorscheme minimalist
 set ls=2
 set showmode
@@ -113,19 +117,23 @@ set nofoldenable
 " Nerdtree shortcut
 map <C-n> :NERDTreeToggle<CR>
 
+" Add new line for NM Enter
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
 " Nerdtree hide ignored files
 let NerdTreeRespectWildIgnore=1
 
 " Emmet
 let g:user_emmet_leader_key=','
 
+" Make it more faster
+set timeoutlen=1000
+set ttimeoutlen=0
+set ttyfast
+
 " Other
 set noesckeys
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.dat
 set nobackup
 set noswapfile
-
-" Make it more faster
-set timeoutlen=1000
-set ttimeoutlen=0
-set ttyfast
