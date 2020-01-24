@@ -2,7 +2,7 @@
 
 let s:rainbow_conf = {
 \	'guifgs': ['#b0e9ff', '#ffeb8a', 'seagreen3', 'lightred'],
-\	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+\	'ctermfgs': ['lightblue', 'lightyellow', 'lightgreen', 'lightred'],
 \	'guis': [''],
 \	'cterms': [''],
 \	'operators': '_,_',
