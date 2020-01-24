@@ -19,7 +19,6 @@ Plugin 'mattn/emmet-vim'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-surround'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'jiangmiao/auto-pairs'
 Plugin 'ervandew/supertab'
 Plugin 'luochen1990/rainbow'
 
@@ -31,23 +30,13 @@ syntax on
 set encoding=utf-8
 
 " Simbols hightlighting
-autocmd FileType python call <SID>def_base_syntax1()
-function! s:def_base_syntax1()
-    syntax match commonOperator "?\|+\|-\|\*\|<\|>\|&\||\|!\|\~\|%\|//\|=\|/\(/\|*\)\@!"
-    syntax match baseDelimiter "\(,\|;\|:\)"
-    hi link commonOperator Operator
-    hi link baseDelimiter Special
-endfunction
-
-autocmd FileType javascript,java call <SID>def_base_syntax2()
-function! s:def_base_syntax2()
+autocmd FileType python,javascript,java call <SID>def_base_syntax()
+function! s:def_base_syntax()
     syntax match commonOperator "?\|+\|-\|\*\|<\|>\|&\||\|!\|\~\|%\|=\|/\(/\|*\)\@!"
     syntax match baseDelimiter "\(,\|;\|:\)"
     hi link commonOperator Operator
     hi link baseDelimiter Special
 endfunction
-
-
 
 " Bracket colorizer
 let g:rainbow_active = 1  
@@ -56,13 +45,13 @@ let g:rainbow_active = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='powerlineish'
-let g:airline#extensions#whitespace#enabled = 0 
+let g:airline#extensions#whitespace#enabled = 0
 
 " History
 set history=50
 
 " Display
-set term=screen-256color
+set term=screen-256color 
 colorscheme minimalist
 set ls=2
 set showmode
