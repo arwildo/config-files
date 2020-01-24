@@ -40,7 +40,7 @@ hi Normal           ctermfg=255     ctermbg=234     cterm=NONE      guifg=#EEEEE
 hi Pmenu            ctermfg=NONE    ctermbg=NONE    cterm=NONE      guifg=NONE          guibg=NONE      gui=NONE
 hi PmenuSel         ctermfg=NONE    ctermbg=59      cterm=NONE      guifg=NONE          guibg=#5F5F5F   gui=NONE
 hi Question         ctermfg=150     ctermbg=NONE    cterm=NONE      guifg=#AFD787       guibg=NONE      gui=bold
-hi Search           ctermfg=NONE    ctermbg=179     cterm=underline guifg=NONE          guibg=NONE      gui=underline
+hi Search           ctermfg=NONE    ctermbg=215     cterm=NONE      guifg=NONE          guibg=#FFAF5F   gui=NONE
 hi SignColumn       ctermfg=NONE    ctermbg=237     cterm=NONE      guifg=NONE          guibg=#3A3A3A   gui=NONE
 hi StatusLine       ctermfg=255     ctermbg=239     cterm=bold      guifg=#EEEEEE       guibg=#4E4E4E   gui=bold
 hi StatusLineNC     ctermfg=255     ctermbg=239     cterm=NONE      guifg=#EEEEEE       guibg=#4E4E4E   gui=NONE

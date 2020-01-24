@@ -117,20 +117,23 @@ set nofoldenable
 " Nerdtree shortcut
 map <C-n> :NERDTreeToggle<CR>
 
+" Add new line for NM Enter
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
 " Nerdtree hide ignored files
 let NerdTreeRespectWildIgnore=1
 
 " Emmet
 let g:user_emmet_leader_key=','
 
+" Make it more faster
+set timeoutlen=1000
+set ttimeoutlen=0
+set ttyfast
+
 " Other
 set noesckeys
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.dat
 set nobackup
 set noswapfile
-set shell=powershell
-
-" Make it more faster
-set timeoutlen=1000
-set ttimeoutlen=0
-set ttyfast
