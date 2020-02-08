@@ -14,10 +14,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
 Plugin 'dikiaap/minimalist'
 Plugin 'mattn/emmet-vim'
-Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-surround'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'ervandew/supertab'
@@ -30,11 +28,6 @@ call vundle#end()
 syntax on
 set encoding=utf-8
 
-<<<<<<< HEAD
-" Simbols hightlighting
-autocmd FileType python,javascript,java call <SID>def_base_syntax()
-function! s:def_base_syntax()
-=======
 " Simbols highlighting
 autocmd FileType python call <SID>def_base_syntax1()
 function! s:def_base_syntax1()
@@ -46,21 +39,17 @@ endfunction
 
 autocmd FileType javascript,java call <SID>def_base_syntax2()
 function! s:def_base_syntax2()
->>>>>>> 57035e3eaa4330c8e48e813aa80e9e109a84b9c0
     syntax match commonOperator "?\|+\|-\|\*\|<\|>\|&\||\|!\|\~\|%\|=\|/\(/\|*\)\@!"
     syntax match baseDelimiter "\(,\|[.]\|;\|:\)"
     hi link commonOperator Operator
     hi link baseDelimiter Special
 endfunction
 
-<<<<<<< HEAD
-=======
 " Set termgui to fix color on winx
 if (has("termguicolors"))
     set termguicolors
 endif
 
->>>>>>> 57035e3eaa4330c8e48e813aa80e9e109a84b9c0
 " Bracket colorizer
 let g:rainbow_active = 1  
 
@@ -75,10 +64,6 @@ let g:airline#extensions#whitespace#enabled = 0
 set history=50
 
 " Display
-<<<<<<< HEAD
-set term=screen-256color 
-=======
->>>>>>> 57035e3eaa4330c8e48e813aa80e9e109a84b9c0
 colorscheme minimalist
 set ls=2
 set showmode
@@ -127,16 +112,6 @@ set wildmenu
 " Folding
 set nofoldenable
 
-" Nerdtree shortcut
-map <C-n> :NERDTreeToggle<CR>
-
-" Add new line for NM Enter
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
-
-" Nerdtree hide ignored files
-let NerdTreeRespectWildIgnore=1
-
 " Emmet
 let g:user_emmet_leader_key=','
 
@@ -150,3 +125,4 @@ set noesckeys
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.dat
 set nobackup
 set noswapfile
+set splitright
