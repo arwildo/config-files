@@ -21,6 +21,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'ervandew/supertab'
 Plugin 'luochen1990/rainbow'
 Plugin 'jacoborus/tender.vim'
+Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
 
 call vundle#end()
 
@@ -115,10 +116,18 @@ set nofoldenable
 " Emmet
 let g:user_emmet_leader_key=','
 
+" Add new line for NM Enter
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
 " Make it more faster
 set timeoutlen=1000
 set ttimeoutlen=0
 set ttyfast
+
+" Shortcut
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+nnoremap <silent> <C-y> :%YAPF<CR><C-y>
 
 " Other
 set noesckeys
