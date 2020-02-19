@@ -20,6 +20,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'ervandew/supertab'
 Plugin 'luochen1990/rainbow'
+Plugin 'ap/vim-css-color'
 Plugin 'jacoborus/tender.vim'
 Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
 
@@ -55,10 +56,10 @@ endif
 let g:rainbow_active = 1  
 
 " Airline config
+let g:airline_theme='powerlineish'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
-let g:airline_theme='powerlineish'
 let g:airline#extensions#whitespace#enabled = 0
 
 " History

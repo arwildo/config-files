@@ -1,2 +1,2 @@
-syntax match javascriptFunction2 /\v[[:alpha:]_.]+\ze(\s?\()/
-hi def link javascriptFunction2 Function
+syntax match javascriptFunctionCall /\v[[:alpha:][a-zA-Z0-9_]+\ze(\s?\()/
+hi def link javascriptFunctionCall Function
