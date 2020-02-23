@@ -1,2 +1,2 @@
-syntax match pythonFunctionCall /\v[[:alpha:][a-zA-Z0-9_]+\ze(\s?\()/
-hi def link pythonFunctionCall Function
+syntax match cFunctionCall /\v[[:alpha:][a-zA-Z0-9_]+\ze(\s?\()/
+hi def link cFunctionCall Function
