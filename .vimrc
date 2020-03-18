@@ -56,7 +56,7 @@ endif
 let g:rainbow_active = 1  
 
 " Airline config
-let g:airline_theme='minimalist'
+let g:airline_theme="minimalist"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
@@ -116,10 +116,6 @@ set nofoldenable
 
 " Emmet
 let g:user_emmet_leader_key=','
-
-" Add new line for NM Enter
-nmap <S-Enter> O<Esc>
-nmap <CR> o<Esc>
 
 " Make it more faster
 set timeoutlen=1000
