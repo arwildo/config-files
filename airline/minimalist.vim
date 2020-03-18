@@ -1,3 +1,5 @@
+" Minimalist (diakapp) & Powerlineish (vim-airline) mashup
+
 " Normal Mode
 let s:N1 = [ '#E9E9E9', '#181B28', 22, 148 ]
 let s:N2 = [ '#9E9E9E', '#303030', 247, 236 ]
