@@ -108,8 +108,9 @@ autocmd FileType python setlocal foldmethod=indent smartindent shiftwidth=4 ts=4
 " Disable mouse
 set mouse=
 
-" Visual prompt for command completion
+" Completion
 set wildmenu
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " Folding
 set nofoldenable
