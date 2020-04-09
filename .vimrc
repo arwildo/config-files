@@ -14,13 +14,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'preservim/nerdtree'
 Plugin 'dikiaap/minimalist'
-Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-surround'
+Plugin 'luochen1990/rainbow'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'ervandew/supertab'
-Plugin 'luochen1990/rainbow'
 Plugin 'ap/vim-css-color'
+Plugin 'prettier/vim-prettier'
+Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-surround'
 Plugin 'jacoborus/tender.vim'
 Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
 
@@ -49,7 +51,7 @@ endfunction
 
 " Set termgui to fix color on winx
 if (has("termguicolors"))
-    set termguicolors
+  set termguicolors
 endif
 
 " Bracket colorizer
@@ -93,6 +95,7 @@ set smartcase
 set gdefault
 set hlsearch
 set showmatch
+set path+=**
 
 " Indentation
 set shiftwidth=4
@@ -103,17 +106,25 @@ set expandtab
 set copyindent
 set autoindent
 set smartindent
-autocmd FileType python setlocal foldmethod=indent smartindent shiftwidth=4 ts=4 et cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python setlocal foldmethod=indent et cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 " Disable mouse
 set mouse=
 
 " Completion
 set wildmenu
-let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " Folding
 set nofoldenable
+
+" NerdTree
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+" Prettier
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
 
 " Emmet
 let g:user_emmet_leader_key=','
@@ -126,6 +137,9 @@ set ttyfast
 " Shortcut
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 nnoremap <silent> <C-y> :%YAPF<CR><C-y>
+
+" Snippets
+nnoremap ,cl :-1read ~/.vim/.skeleton.cl<CR>$hi
 
 " Other
 set noesckeys
