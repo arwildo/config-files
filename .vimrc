@@ -23,8 +23,6 @@ Plugin 'ap/vim-css-color'
 Plugin 'prettier/vim-prettier'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-surround'
-Plugin 'jacoborus/tender.vim'
-Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
 
 call vundle#end()
 
@@ -48,11 +46,6 @@ function! s:def_base_syntax2()
     hi link commonOperator Operator
     hi link baseDelimiter Special
 endfunction
-
-" Set termgui to fix color on winx
-if (has("termguicolors"))
-  set termguicolors
-endif
 
 " Bracket colorizer
 let g:rainbow_active = 1  
@@ -136,10 +129,6 @@ set ttyfast
 
 " Shortcut
 nnoremap <silent> <C-l> :nohl<CR><C-l>
-nnoremap <silent> <C-y> :%YAPF<CR><C-y>
-
-" Snippets
-nnoremap ,cl :-1read ~/.vim/.skeleton.cl<CR>$hi
 
 " Other
 set noesckeys
