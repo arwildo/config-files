@@ -23,6 +23,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'prettier/vim-prettier'
 Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-surround'
+Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
 
 call vundle#end()
 
@@ -62,6 +63,7 @@ set history=50
 
 " Display
 colorscheme minimalist
+hi Normal guibg=NONE ctermbg=NONE
 set ls=2
 set showmode
 set showcmd
@@ -91,15 +93,15 @@ set showmatch
 set path+=**
 
 " Indentation
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set shiftround
 set expandtab
 set copyindent
 set autoindent
 set smartindent
-autocmd FileType python setlocal foldmethod=indent et cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python setlocal shiftwidth=4 ts=4 softtabstop=4 foldmethod=indent et cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 " Disable mouse
 set mouse=
@@ -129,6 +131,7 @@ set ttyfast
 
 " Shortcut
 nnoremap <silent> <C-l> :nohl<CR><C-l>
+nnoremap <silent> <C-y> :%YAPF<CR><C-y>
 
 " Other
 set noesckeys
