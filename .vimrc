@@ -93,15 +93,15 @@ set showmatch
 set path+=**
 
 " Indentation
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 set shiftround
 set expandtab
 set copyindent
 set autoindent
 set smartindent
-autocmd FileType python setlocal shiftwidth=4 ts=4 softtabstop=4 foldmethod=indent et cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd FileType python setlocal cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 " Disable mouse
 set mouse=
