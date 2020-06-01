@@ -171,11 +171,15 @@ xterm*|rxvt*)
 esac
 
 # PATHS
+export GOROOT=/usr/local/go
 export GOPATH=/home/arwildo/Documents/Go/Modules/
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # VARS
-seclists=$HOME/Documents/Git/SecLists/
+seclists=$HOME/Documents/Git/SecLists
+hacks=$HOME/Documents/Hacks
+git=$HOME/Documents/Git
+vpn=$HOME/Documents/Files/Configs/opnvpn
 
 # ALIAS
 alias urldecode='python3 -c "import sys, urllib.parse as ul; \
