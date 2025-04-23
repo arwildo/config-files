@@ -1,0 +1,11 @@
+{
+  "base_keymap": "VSCode",
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "vim_mode": true,
+  "ui_font_size": 13.5,
+  "buffer_font_size": 13.5,
+  "format_on_save": "off"
+}
