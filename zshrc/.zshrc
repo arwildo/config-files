@@ -6,6 +6,10 @@ alias java="$JAVA_HOME/bin/java"
 # Alias
 alias py='python3'
 alias docom='docker-compose'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gst='git status'
 
 # Enable Vim keybindings
 bindkey -v
