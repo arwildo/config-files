@@ -1,5 +1,5 @@
 # Display
-PROMPT='%F{green}%n@%mf:%F{blue}%~%f$ '
+PROMPT='%F{green}%n@%m%f:%F{blue}%~%f$ '
 
 
 # Java
