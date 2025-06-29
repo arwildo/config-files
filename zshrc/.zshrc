@@ -14,6 +14,7 @@ alias gc='git commit'
 alias gp='git push'
 alias gst='git status'
 win="/Users/arwildo/Code/VM/Windows"
+info="/Users/arwildo/Documents/Info/teks.md"
 
 # Enable Vim keybindings
 bindkey -v
@@ -30,5 +31,5 @@ export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;32'
 
 # LLM
-alias lm='ollama run qwen2.5-coder:7b'
-
+#alias lm='ollama run qwen2.5-coder:7b'
+alias lm='ollama run phi3 "Answer just the command and explain it as shorts as posibble, 30 char max about this question :'
