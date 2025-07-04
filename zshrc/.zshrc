@@ -1,10 +1,12 @@
 # Display
 PROMPT='%F{green}%n@%m%f:%F{blue}%~%f$ '
 
-
 # Java
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/liberica-jdk-21-full.jdk/Contents/Home"
 export PATH="$JAVA_HOME/bin:$PATH"
+
+# Javascript
+export PATH="$HOME/.yarn/bin:$PATH"
 
 # Alias
 alias py='python3'
@@ -12,7 +14,7 @@ alias docom='docker-compose'
 alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
-alias gst='git status'
+alias gs='git status'
 win="/Users/arwildo/Code/VM/Windows"
 info="/Users/arwildo/Documents/Info/teks.md"
 
