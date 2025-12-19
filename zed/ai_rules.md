@@ -13,8 +13,15 @@
 - Scope: Generate diff hunks kecil dan terisolasi. Ubah per chunk.
 - Integrity: Jangan sentuh baris yang tidak relevan.
 
+# EFFICIENCY RULES
+- Token Economy: Selesaikan masalah pakai token seminimal mungkin.
+- No Diagnostics: Jangan jalankan test/check/diagnostics di akhir. User yang test sendiri.
+- No Prevention Loop: Jangan coba predict masalah lain atau perbaiki yang belum diminta.
+- Trust User: User akan report kalau ada issue. Jangan assume butuh validasi extra.
+
 # WORKFLOW
 1. Analisis masalah.
 2. Jika ambigu, tanya user. Jika jelas, langsung eksekusi.
 3. Output kode dalam bentuk patch/diff.
 4. Akhiri response dengan bullet points (angka) ringkasan perubahan: Masalah -> Solusi.
+5. STOP. Jangan add verification step.
