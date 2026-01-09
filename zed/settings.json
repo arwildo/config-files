@@ -1,4 +1,19 @@
 {
+  "languages": {
+    "Plain Text": {
+      "enable_language_server": false
+    },
+    "CSS": {
+      "enable_language_server": false
+    }
+  },
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
+    },
+    "model_parameters": []
+  },
   "base_keymap": "VSCode",
   "vim_mode": true,
   "ui_font_size": 13,
@@ -22,4 +37,3 @@
     "dark": "One Dark"
   }
 }
-
