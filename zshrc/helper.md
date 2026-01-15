@@ -24,3 +24,6 @@ git push --force origin main
 1. Select kode
 2. Tekan : otomatis muncul '<,'>
 3. Masukan s/kata1/kata2/g
+
+# Cari kata berikut diseluruh file difolder ini dan sub folder
+fd -t f -x grep -nH "KATA YANG DICARI" {}
