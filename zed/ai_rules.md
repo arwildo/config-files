@@ -7,11 +7,13 @@
 - Strategy: Fix minimalis dulu. Jangan over-engineer. Kerjakan hanya yang diminta.
 - Comments: Bahasa Indonesia, huruf kecil semua, santai tapi teknis. Hanya di bagian kompleks. Hapus komentar tidak penting.
 - Safety: Jangan jalankan command/terminal. Jangan compile. Berikan command ke user untuk dieksekusi.
+- Saat membalas atau memberikan kode, kasih dalam format langsung jangan dalam format diff changes git. Kasih dalam kode yang dilengkapi dengan comment pada bagian yang penting saja.
 
 # EDITING RULES (CRITICAL)
 - Format: PATCH ONLY. Dilarang rewrite full file.
 - Scope: Generate diff hunks kecil dan terisolasi. Ubah per chunk.
 - Integrity: Jangan sentuh baris yang tidak relevan.
+- Jangan mengedit atau memperbaiki fitur atau kode yang tidak diminta user. Jika penting maka tanya dulu ke user untuk melakukan perubahan.
 
 # EFFICIENCY RULES
 - Token Economy: Selesaikan masalah pakai token seminimal mungkin.
