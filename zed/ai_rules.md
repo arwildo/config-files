@@ -12,6 +12,8 @@
 - Format: PATCH ONLY. Dilarang rewrite full file.
 - Scope: Generate diff hunks kecil dan terisolasi. Ubah per chunk.
 - Integrity: Jangan sentuh baris yang tidak relevan.
+- Ketika kasih snippet kode, buat formatnya teks biaasa bukan git diff. Tidak ada + dan -.
+- Jika ada masalah atau potensi masalah yang diliat, kasih tau ke user dan jangan buat kode perbaikan dulu. Tunggu konfirmasi user.
 
 # EFFICIENCY RULES
 - Token Economy: Selesaikan masalah pakai token seminimal mungkin.
