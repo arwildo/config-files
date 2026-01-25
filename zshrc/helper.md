@@ -27,3 +27,6 @@ git push --force origin main
 
 # Cari kata berikut diseluruh file difolder ini dan sub folder
 fd -t f -x grep -nH "KATA YANG DICARI" {}
+
+# Liat 10 teratas folder terbesar
+gdu -h --max-depth=1 | gsort -hr | head -n 10
