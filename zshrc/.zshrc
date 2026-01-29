@@ -1,15 +1,15 @@
 # Display
 PROMPT='%F{green}%n@%m%f:%F{blue}%~%f$ '
 
-# Java
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/liberica-jdk-21-full.jdk/Contents/Home"
-export PATH="$JAVA_HOME/bin:$PATH"
+# Jenv Setup
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 # Javascript
 export PATH="$HOME/.yarn/bin:$PATH"
 
 # All
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="/opt/homebrew/bin:$HOME/.local/bin:$PATH"
 
 # Alias
 alias py='python3'
@@ -17,10 +17,11 @@ alias docom='docker-compose'
 alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
+alias gpl='git pull origin main'
 alias gs='git status'
 alias gd='git diff'
 alias gl='git log'
-alias yt='yt-dlp -f "248"'
+alias yt='yt-dlp --js-runtimes bun'
 alias yto='yt-dlp -f "137"'
 alias ytv='yt-dlp -f "270"'
 alias ytc='yt-dlp -F'
@@ -64,3 +65,10 @@ convertgif() {
   ffmpeg -i "$input" -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2,format=rgba" -c:v prores_ks -pix_fmt yuva444p10le "$output"
   echo "Saved as $output"
 }
+
+# bun completions
+[ -s "/Users/arwildo/.bun/_bun" ] && source "/Users/arwildo/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
