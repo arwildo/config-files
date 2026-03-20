@@ -36,4 +36,4 @@ cat namafile.txt | xargs -I {} rm "{}"
 
 # Cari yang pakai port & kill
 lsof -i :3001
-kill -9 3001
+kill -9 [PID]
