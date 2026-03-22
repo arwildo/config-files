@@ -1,16 +1,52 @@
 {
+  "code_actions_on_format": {
+    "source.fixAll.eslint": true
+  },
+  "formatter": [],
   "languages": {
+    "Java": {
+      "language_servers": ["-jdtls"]
+    },
     "Plain Text": {
       "enable_language_server": false
     },
     "CSS": {
       "enable_language_server": false
+    },
+    "TypeScript": {
+      "language_servers": ["!vtsls", "!eslint", "..."],
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "JavaScript": {
+      "language_servers": ["!vtsls", "!eslint", "..."],
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TSX": {
+      "language_servers": ["!vtsls", "!eslint", "..."],
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "JSX": {
+      "language_servers": ["!vtsls", "!eslint", "..."],
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
     }
   },
   "agent": {
+    "default_profile": "write",
+    "inline_assistant_model": {
+      "provider": "deepseek",
+      "model": "deepseek-chat"
+    },
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4.1"
+      "provider": "deepseek",
+      "model": "deepseek-chat"
     },
     "model_parameters": []
   },
@@ -25,7 +61,7 @@
     "metrics": false,
     "diagnostics": false
   },
-  "format_on_save": "off",
+  "format_on_save": "on",
   "git": {
     "inline_blame": {
       "enabled": false
