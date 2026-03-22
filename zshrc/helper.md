@@ -30,3 +30,10 @@ fd -t f -x grep -nH "KATA YANG DICARI" {}
 
 # Liat 10 teratas folder terbesar
 gdu -h --max-depth=1 | gsort -hr | head -n 10
+
+# Hapus file yang ada di list file
+cat namafile.txt | xargs -I {} rm "{}"
+
+# Cari yang pakai port & kill
+lsof -i :3001
+kill -9 [PID]
